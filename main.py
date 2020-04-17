@@ -1,5 +1,8 @@
 #!～/usr/bin/python
-from absl import flags, app
+from absl import flags, app, logging
+
+
+
 
 def main(args):
     del args
@@ -7,6 +10,8 @@ def main(args):
         config = json.load(config_f)
 
 if __name__ == "__main__":
+    logging.set_verbosity(logging.DEBUG)
+    # logging.set_verbosity(logging.INFO)
     FLAGS = flags.FLAGS
     flags.DEFINE_string('config','default_config.json','配置文件')
     app.run(main)
