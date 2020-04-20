@@ -1,7 +1,7 @@
-#!～/usr/bin/python
+#! /usr/bin/python
+# -*- coding: utf-8 -*-
+
 from absl import flags, app, logging
-
-
 
 
 def main(args):
