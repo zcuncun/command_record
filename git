@@ -2,41 +2,12 @@
 
 // 1. 创建版本库
 
-$ cd:e // 切换盘符
-
-$ cd .. // 回到文件上一层(注: cd与..中间有个空格)
-
-$ cd ~ // 回到当前目录的主目录
-
-$ mkdir Git // 创建文件夹Git
-
-$ touch fileName // 新建文件
-
-$ vi fileName // 编辑文件
-
-$ press i button // 开始进入编辑状态
-
-$ press the Esc button // 退出vim编辑区
-
-$ :wq // 退出编辑状态, 回到命令窗口
-
-$ mkdir learngit // 创建文件夹learngit 
-
-$ pwd // 显示当前路径/e/Git/learngit
-
 $ git init // 将当前目录变成一个Git可以管理的仓库
-
-$ touch+文件名 // 直接新建一个文件
-
-$ git add readme.txt // 将文件添加到Git仓库（把文件修改添加到暂存区）
 
 $ git commit -m "wrote a readme.txt." // 将文件提交到仓库（把暂存区的所有内容提交到当前分支）
 
-$ git add file1.txt // 添加file1.txt文件
-
 $ git add file2.txt file3.txt // 同时添加file2.txt和file3.txt两个文件
 
-$ git commit -m "add 3 files." // 一次性提交3个文件
 
 2. 时光穿梭机：
 
@@ -54,8 +25,6 @@ $ git reset --hard HEAD^ // 回到上一个版本（HEAD: 当前版本，HEAD^: 
 
 $ git reset --hard 1234567 // 回到指定版本号commit id（此处：commit id 假设为1234567******，Git会根据commit id的前几位自动寻找对应的版本）
 
-$ cat readme.txt // 查看readme.txt的内容
-
 $ git reflog // 查看每一次命令记录历史，确保能回到任意版本　　
 
 // 2.2 工作区与暂存区
@@ -70,13 +39,9 @@ $ git diff --cached // 比较暂存区（stage/index）和分支（master）的�
 
 $ git checkout -- readme.txt // 撤销修改：1. 文件在添加到缓存区前修改，则回退到原工作区状态；2. 文件在添加到缓存区后修改，则回退到原缓存区状态。也即是将readme.txt撤回到最近一次git add或git commit状态（注：--表示在当前分支，如果没有，则切换到另一个分支）
 
-$ cat readme.txt // 查看文件内容
-
 $ git reset HEAD readme.txt // 1. 回退到最新版本；2. 将暂存区的修改回退到工作区
 
 // 2.5 删除文件
-
-$ rm test.txt // 删除工作区文件（类似于手动删除）
 
 $ git status // 查看当前工作区与缓存区状态
 
@@ -97,16 +62,11 @@ git push -u origin master // 第一次推送master分支的所有内容
 注：在GitHub上创建新仓库时，如果勾选了README.md选项时，可能会出现下面错误，提示：远程仓库有readme.txt,而本地仓库没有README.txt,此时应该先进行合并文件，再进行推送。
 
 
-
 git pull --rebase origin master // 推送之前，进行合并
-
 
 
 合并文件之后，发现本地仓库中多了README.md文件，此时再进行推送修改到远程仓库就可以了。
 
-
-
- 
 
 再次执行：git push -u origin master, 即可推送本地仓库到远程仓库了
 
