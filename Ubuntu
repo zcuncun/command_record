@@ -2,3 +2,7 @@ sudo apt-get install terminator
 
 Fira code
 https://github.com/tonsky/FiraCode
+    "editor.fontSize": 26,
+    "editor.fontWeight": "600",
+    "editor.fontFamily": "Fira Code Retina",
+    "editor.fontLigatures": "'ss03','ss05','ss06'"
