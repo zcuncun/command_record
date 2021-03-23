@@ -6,3 +6,23 @@ https://github.com/tonsky/FiraCode
     "editor.fontWeight": "600",
     "editor.fontFamily": "Fira Code Retina",
     "editor.fontLigatures": "'ss03','ss05','ss06'"
+    
+    
+Python
+
+libbz2-dev
+libc6-dev
+libffi-dev
+libgdbm-dev
+libgdbm-compat-dev
+liblzma-dev
+libncurses5-dev
+libreadline-dev
+libsqlite3-dev
+libssl-dev
+openssl
+sqlite3
+tcl-dev (tcl8.6-dev)
+tk-dev (tk8.6-dev)
+uuid-dev
+zlib1g-dev
