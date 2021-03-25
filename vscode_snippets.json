@@ -22,17 +22,17 @@
 			"$TM_FILENAME",
 			"\"\"\"",
 			"",
-			"from absl import flags, app, logging",
+			"import logging",
 			"",
 			"",
 			"def main():",
 			"    pass",
 			"",
+			"",
 			"if __name__ == \"__main__\":",
 			"    logging.set_verbosity(logging.DEBUG)",
-			"    FLAGS = flags.FLAGS",
-			"    flags.DEFINE_string('config','default_config.json','配置文件')",
-			"    app.run(main)"
+			"    main()",
+			""
 		]
 	}
 }
