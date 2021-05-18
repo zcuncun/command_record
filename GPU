@@ -1,0 +1,2 @@
+查看所有和GPU有关程序
+sudo fuser -v /dev/nvidia* 
