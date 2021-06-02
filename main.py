@@ -10,8 +10,7 @@ def main(args):
         config = json.load(config_f)
 
         
-if __name__ == "__main__":
-    logging.setLevel(logging.DEBUG)    
+if __name__ == "__main__":  
     parser = argparse.ArgumentParser(description='OCRTrain launch')
     parser.add_argument('--cfg', required=True, type=str, help='config path')
     args = parser.parse_args()
