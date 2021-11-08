@@ -25,7 +25,7 @@ $ git branch -d <name> // 删除该分支
 
 ## 远程
 
-git push origin master // 以后每次本地修改更新后，推送最新修改
+git push origin master // 推送到远程分支 如果没有会新建
 
 git push origin --delete Chapater6 //  可以删除远程分支Chapater6 
   
