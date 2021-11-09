@@ -24,6 +24,8 @@ $ git merge <name> // 合并分支到当前分支上
 $ git branch -d <name> // 删除该分支
 
 ## 远程
+  
+git clone -v dev  // clone指定分支
 
 git push origin master // 推送到远程分支 如果没有会新建
 
