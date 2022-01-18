@@ -8,7 +8,7 @@ download.py
 import requests
 from concurrent.futures import ThreadPoolExecutor, wait
 import time
-
+import logging
 
 def download(url, thread=1):
     """下载某个文件并转为文件对象"""
@@ -38,5 +38,5 @@ def download(url, thread=1):
         file = io.BytesIO(content)
         return file
     except Exception as e:
-        bytedlogger.logging.error(f"Download failed")
+        logging.error(f"Download failed")
         raise
