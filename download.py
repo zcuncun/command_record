@@ -10,6 +10,10 @@ from concurrent.futures import ThreadPoolExecutor, wait
 import time
 import logging
 
+level = logging.INFO
+logger = logging.getLogger()
+logger.setLevel(level)
+
 def download(url, thread=1):
     """下载某个文件并转为文件对象"""
     def download_part(url, start, end, retry=3):
@@ -24,7 +28,7 @@ def download(url, thread=1):
             retry -= 1
         return content
     tp = ThreadPoolExecutor(thread)
-    bytedlogger.logging.info(f"Download from {url}")
+    logging.info(f"Download from {url}")
     try:
         r = requests.get(url, stream=True)
         c_l = int(r.headers["Content-Length"])
